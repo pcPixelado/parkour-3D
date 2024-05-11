@@ -27,8 +27,8 @@ public class MouseLook : MonoBehaviour
         }
 
         // Limitar la rotación vertical entre -90 y 90 grados para evitar volteos
-        rotacionY = Mathf.Clamp(rotacionY, 0f, 0f);
-
+        rotacionY = Mathf.Clamp(rotacionY, -100f, 1000000f);
+   
         // Rotar la cámara verticalmente y horizontalmente
         transform.localEulerAngles = new Vector3(rotacionY, rotacionX, 0);
     }
